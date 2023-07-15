@@ -7,7 +7,8 @@
     <bean id="personDao" class="ru.otus.spring.dao.PersonDaoSimple">
     </bean>
     <bean id="personService" class="ru.otus.spring.service.PersonServiceImpl">
-        <constructor-arg ref="personDao" index="0"/>
+<!--        <constructor-arg ref="personDao" index="0"/>-->
+        <property name="dao" ref="personDao"/>
     </bean>
 
 </beans>
